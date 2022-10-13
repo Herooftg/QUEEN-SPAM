@@ -158,7 +158,7 @@ sudousers = os.environ.get("SUDO_USER", None)
 @BOT0.on(events.NewMessage(incoming=True, pattern=r"\%saddsudo(?: |$)(.*)" % hl))
 async def tb(event):
     if event.sender_id == OWNER_ID:
-        ok = await event.reply("Adding user as a sudo...")
+        ok = await event.reply("ᴀᴅᴅɪɴɢ ᴜꜱᴇʀ ᴀꜱ ᴀ ꜱᴜᴅᴏ...")
         QUEEN = "SUDO_USER"
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
@@ -171,13 +171,13 @@ async def tb(event):
         try:
             target = await get_user(event)
         except Exception:
-            await ok.edit(f"Reply to a user.")
+            await ok.edit(f"ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ.")
         if sudousers:
             newsudo = f"{sudousers} {target}"
         else:
             newsudo = f"{target}"
-        await ok.edit(f"**Added `{target}` ** ᴀꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ ʀᴇꜱᴛᴀʀᴛɪɴɢ.. ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍɪɴᴜᴛᴇ...")
-        heroku_var[DEADLY] = newsudo   
+        await ok.edit(f"**ᴀᴅᴅᴇᴅ `{target}` ** ᴀꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ ʀᴇꜱᴛᴀʀᴛɪɴɢ.. ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍɪɴᴜᴛᴇ...")
+        heroku_var[QUEEN] = newsudo   
    
      
 async def get_user(event):
