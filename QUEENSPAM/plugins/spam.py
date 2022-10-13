@@ -41,7 +41,7 @@ async def spam(e):
             return await e.reply(usage) 
         Queen = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(Deadly) == 2:
+        if len(Queen) == 2:
             message = str(Queen[1])
             counter = int(Queen[0])
             if counter > 100:
@@ -81,7 +81,7 @@ async def spam(e):
             return await e.reply(usage)
         Queen = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(Deadly) == 2:
+        if len(Queen) == 2:
             message = str(Queen[1])
             counter = int(Queen[0])
             for _ in range(counter):
