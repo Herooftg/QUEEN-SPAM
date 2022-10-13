@@ -72,8 +72,8 @@ async def echo(event):
             chat_id = event.chat_id
             try:
                 jay = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
-                jay = Get(blaze)
-                await event.client(blaze)
+                jay = Get(jay)
+                await event.client(jay)
             except BaseException:
                 pass
             if is_echo(user_id, chat_id):
