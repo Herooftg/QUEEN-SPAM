@@ -1,17 +1,17 @@
 {
-    "name": "Deadly Spam Bot",
+    "name": "Queen Spam",
     "description": "MOST POWERFUL + STABLE SPAM USERBOTS",
-    "logo": "",
+    "logo": "https://te.legra.ph/file/9bf01654a01c58f75803f.jpg",
     "keywords": [
         "telegram",
         "telethon",
         "telegram-bot",
-        "deadlySameer",
+        "export_gabbar",
         "SpamBots"
     ],
-    "repository": "https://t.me/Deadly-Fighters",
-    "website": "https://t.me/Deadly-Fighters",
-    "success_url": "https://t.me/deadly-fighters",
+    "repository": "https://github.com/MrProgrammer72/QUEEN-SPAM",
+    "website": "https://github.com/MrProgrammer72/QUEEN-SPAM",
+    "success_url": "https://github.com/MrProgrammer72/QUEEN-SPAM",
     "env": {
              "API_ID": {
         "description": "Fill Api ID Take this value from My.telegram.org",
