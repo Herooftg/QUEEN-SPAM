@@ -22,7 +22,7 @@ QUEEN = "✨ 𝗤𝘂𝗲𝗲𝗻 𝗦𝗽𝗮𝗺 𝗕𝗮𝗯𝘆 🥀\n\n"
 QUEEN += f"❅─────✧❅✦❅✧─────❅•\n"
 QUEEN += f"➻ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.1`\n"
 QUEEN += f"➻ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{version.__version__}`\n"
-QUEEN += f"➻ **Qᴜᴇᴇɴʙᴏᴛ ᴠᴇʀsɪᴏɴ**  : `{deadlyversion}`\n"
+QUEEN += f"➻ **Qᴜᴇᴇɴʙᴏᴛ ᴠᴇʀsɪᴏɴ**  : `{queenversion}`\n"
 QUEEN += f"❅─────✧❅✦❅✧─────❅•\n\n"   
 
                                   
