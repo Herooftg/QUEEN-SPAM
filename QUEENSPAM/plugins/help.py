@@ -36,7 +36,7 @@ async def help(event):
                                   caption=QUEEN_Help,
                                   buttons=[
         [
-        Button.url("°ᴄʜᴀɴɴᴇ°ʟ", "https://t.me/Deadly_spambot")
+        Button.url("°ᴄʜᴀɴɴᴇ°ʟ", "https://t.me/QUEEN_NETWORK")
         ] 
         ]
         )
