@@ -40,8 +40,8 @@ async def echo(event):
             else:
                  chat_id = event.chat_id
                  try:
-                     chandan = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
-                     chandan = Get(chandan)
+                     gabbar = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
+                     gabbar = Get(gabbar)
                      await event.client(chandan)
                  except BaseException:
                     pass
