@@ -5,7 +5,7 @@ from time import time
 from datetime import datetime
 from QUEENSPAM import CMD_HNDLR as hl
     
-QUEEN_PIC = "https://telegra.ph/file/c6f99c0b68ff07439ed72.jpg"
+QUEEN_PIC = "https://te.legra.ph/file/5a58024f9d9fd11ba2093.jpg"
 
 QUEEN_Help = " ✨ 𝗤𝘂𝗲𝗲𝗻 𝗦𝗽𝗮𝗺 𝗕𝗼𝘁 🥀 \n\n"
  
