@@ -1,31 +1,31 @@
-from DEADLYSPAM import BOT0,SUDO_USERS
+from QUEENSPAM import BOT0,SUDO_USERS
 from telethon import events, Button
 from telethon.tl.custom import button
 from time import time
 from datetime import datetime
-from DEADLYSPAM import CMD_HNDLR as hl
+from QUEENSPAM import CMD_HNDLR as hl
     
-HELP_PIC = "https://telegra.ph/file/c6f99c0b68ff07439ed72.jpg"
+QUEEN_PIC = "https://telegra.ph/file/c6f99c0b68ff07439ed72.jpg"
 
-DEAD_Help = "🔥 Dᴇᴀᴅʟʏ Sᴘᴀᴍ Bᴏᴛ 🔥\n\n"
+QUEEN_Help = " ✨ 𝗤𝘂𝗲𝗲𝗻 𝗦𝗽𝗮𝗺 𝗕𝗼𝘁 🥀 \n\n"
  
-DEAD_Help += f"__ᴄᴍɴᴅs ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴅᴇᴀᴅʟʏ ʙᴏᴛ__\n\n"
+QUEEN_Help += f"__ᴄᴍɴᴅs ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴅᴇᴀᴅʟʏ ʙᴏᴛ__\n\n"
 
-DEAD_Help += f" ↧ 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙲𝙼𝙳𝚂 ↧\n\n"
+QUEEN_Help += f" ๏ ᴜꜱᴇʀʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ\n\n"
 
-DEAD_Help += f" `!ping` - to check ping\n `!alive` - to check bot alive/version (only main userbot will reply)\n !`restart` - to restart all spam bots \n `!addecho` - to addecho \n `!rmecho` - To remove Echo \n `!addsudo` - To add sudo user using spam bot \n\n"
+QUEEN_Help += f" ➻ `!ping` - ᴛᴏ ᴄʜᴇᴄᴋ ᴘɪɴɢ\ɴ ➻ `!alive` - ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ ᴀʟɪᴠᴇ/ᴠᴇʀꜱɪᴏɴ (ᴏɴʟʏ ᴍᴀɪɴ ᴜꜱᴇʀʙᴏᴛ ᴡɪʟʟ ʀᴇᴘʟʏ)\n ➻ `!restart` - ᴛᴏ ʀᴇꜱᴛᴀʀᴛ ᴀʟʟ ꜱᴘᴀᴍ ʙᴏᴛꜱ \n `!addecho` - ᴛᴏ ᴀᴅᴅᴇᴄʜᴏ \n `!recho` - ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴇᴄʜᴏ \n `!addsudo` - ᴛᴏ ᴀᴅᴅ ꜱᴜᴅᴏ ᴜꜱᴇʀ ᴜꜱɪɴɢ ꜱᴘᴀᴍ ʙᴏᴛ \n\n"
  
-DEAD_Help += f" ↧ 𝙻𝙴𝙰𝚅𝙴 𝙲𝙼𝙳 ↧\n\n"
+QUEEN_Help += f" ๏ ʟᴇᴀᴠᴇ ᴄᴏᴍᴍᴀɴᴅꜱ\n\n"
 
-DEAD_Help += f" `!leave` - to leave public/private channel/groups\n\n"
+QUEEN_Help += f" ➻ `!leave` - ᴛᴏ ʟᴇᴀᴠᴇ ᴘᴜʙʟɪᴄ/ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘꜱ\n\n"
  
-DEAD_Help += f" ↧ 𝚂𝙿𝙰𝙼 𝙲𝙼𝙳𝚂 ↧\n\n"
+QUEEN_Help += f" ๏ ꜱᴘᴀᴍ ᴄᴏᴍᴍᴀɴᴅꜱ\n\n"
 
-DEAD_Help += f" `!raid` - to raid\n `!replyraid` - to active reply raid\n `!dreplyraid` - to de-active reply raid\n `!spam` - this cmd use for Normal spam\n `!bigspam` - this cmd use for big spam\n `!uspam` - this cmd use for unlimited Spam until You restart the bots!!\n `!delayspam` - this cmd use for delay spam\n\n"
+QUEEN_Help += f" ➻ `!raid` - ᴛᴏ ʀᴀɪᴅ\n ➻ `!replyraid` - ᴛᴏ ᴀᴄᴛɪᴠᴇ ʀᴇᴘʟʏ ʀᴀɪᴅ\n ➻ `!queenraid` - ᴛᴏ ᴅᴇ-ᴀᴄᴛɪᴠᴇ ʀᴇᴘʟʏ ʀᴀɪᴅ\n ➻ `!spam` - ᴛʜɪꜱ ᴄᴍᴅ ᴜꜱᴇ ꜰᴏʀ ɴᴏʀᴍᴀʟ ꜱᴘᴀᴍ\n ➻ `!bigspam` - ᴛʜɪꜱ ᴄᴍᴅ ᴜꜱᴇ ꜰᴏʀ ʙɪɢ ꜱᴘᴀᴍ\n ➻ `!uspam` - ᴛʜɪꜱ ᴄᴍᴅ ᴜꜱᴇ ꜰᴏʀ ᴜɴʟɪᴍɪᴛᴇᴅ ꜱᴘᴀᴍ ᴜɴᴛɪʟ ʏᴏᴜ ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛꜱ!!\n ➻ `!queenspam` - ᴛʜɪꜱ ᴄᴍᴅ ᴜꜱᴇ ꜰᴏʀ ᴅᴇʟᴀʏ ꜱᴘᴀᴍ\n\n"
 
-DEAD_Help += f" !deadlyspam - ɪ ᴡɪʟʟ ꜱᴜɢɢᴇꜱᴛ ᴅᴏɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ😂 ↧\n\n"
+QUEEN_Help += f" !queenspam - ɪ ᴡɪʟʟ ꜱᴜɢɢᴇꜱᴛ ᴅᴏɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ \n\n"
 
-DEAD_Help += f"© @TheDeadlyBots\n"
+QUEEN_Help += f"© @TheQueenBots\n"
 
 
 @BOT0.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
@@ -33,10 +33,10 @@ async def help(event):
     if event.sender_id in SUDO_USERS:
       await BOT0.send_file(event.chat_id,
                                   HELP_PIC,
-                                  caption=DEAD_Help,
+                                  caption=QUEEN_Help,
                                   buttons=[
         [
-        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/Deadly_spambot")
+        Button.url("°ᴄʜᴀɴɴᴇ°ʟ", "https://t.me/Deadly_spambot")
         ] 
         ]
         )
