@@ -19,8 +19,8 @@ import os
 from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from DEADLYSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
-from DEADLYSPAM import CMD_HNDLR as hl
+from QUEENSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
+from QUEENSPAM import CMD_HNDLR as hl
 from resources.data import GROUP, PORMS
 
 @BOT0.on(events.NewMessage(incoming=True, pattern=r"\%sspam(?: |$)(.*)" % hl))
@@ -39,16 +39,16 @@ async def spam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage) 
-        Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        Queen = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
         if len(Deadly) == 2:
-            message = str(Deadly[1])
-            counter = int(Deadly[0])
+            message = str(Queen[1])
+            counter = int(Queen[0])
             if counter > 100:
                 return await e.reply(error)
             await asyncio.wait([e.respond(message) for i in range(counter)])
         elif e.reply_to_msg_id and smex.media:
-            counter = int(Deadly[0])
+            counter = int(Queen[0])
             if counter > 100:
                 return await e.reply(error)
             for _ in range(counter):
@@ -56,7 +56,7 @@ async def spam(e):
                 await gifspam(e, smex)
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(Deadly[0])
+            counter = int(Queen[0])
             if counter > 100:
                 return await e.reply(error)
             await asyncio.wait([e.respond(message) for i in range(counter)])
@@ -79,11 +79,11 @@ async def spam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage)
-        Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        Queen = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
         if len(Deadly) == 2:
-            message = str(Deadly[1])
-            counter = int(Deadly[0])
+            message = str(Queen[1])
+            counter = int(Queen[0])
             for _ in range(counter):
                  async with e.client.action(e.chat_id, "typing"):
                      if e.reply_to_msg_id:
@@ -92,7 +92,7 @@ async def spam(e):
                           await e.client.send_message(e.chat_id, message)
                  await asyncio.sleep(0.3)
         elif e.reply_to_msg_id and smex.media:  
-            counter = int(Deadly[0])
+            counter = int(Queen[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
@@ -125,12 +125,12 @@ async def spam(e):
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage)
         smex = await e.get_reply_message()
-        Deadly = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-        Deadlysexy = Deadly[1:]
-        if len(Deadlysexy) == 2:
-            message = str(Deadlysexy[1])
-            counter = int(Deadlysexy[0])
-            sleeptime = float(Deadly[0])
+        Queen = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+        Queensexy = Queen[1:]
+        if len(Queensexy) == 2:
+            message = str(Queensexy[1])
+            counter = int(Queensexy[0])
+            sleeptime = float(Queen[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
@@ -139,8 +139,8 @@ async def spam(e):
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(sleeptime)
         elif e.reply_to_msg_id and smex.media:
-            counter = int(Deadlysexy[0])
-            sleeptime = float(Deadly[0])
+            counter = int(Queensexy[0])
+            sleeptime = float(Queen[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
@@ -148,8 +148,8 @@ async def spam(e):
                 await asyncio.sleep(sleeptime)
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(Deadlysexy[0])
-            sleeptime = float(Deadly[0])
+            counter = int(Queensexy[0])
+            sleeptime = float(Queen[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
@@ -173,9 +173,9 @@ async def pspam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage)
-        Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(Deadly) == 1:
-            counter = int(Deadly[0])
+        Queen = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(Queen) == 1:
+            counter = int(Queen[0])
             if int(e.chat_id) in GROUP:
                 text = f"Sorry !! I can't spam here"
                 await e.reply(text)
