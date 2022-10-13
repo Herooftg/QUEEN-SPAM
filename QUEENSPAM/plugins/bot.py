@@ -3,42 +3,42 @@ import asyncio
 import sys
 import git
 import heroku3
-# Changed root to DEADLYSPAM
-from DEADLYSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9
-from DEADLYSPAM import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, deadlyversion
-from DEADLYSPAM import CMD_HNDLR as hl
+# Changed root to QUEENSPAM
+from QUEENSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9
+from QUEENSPAM import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY, queenversion
+from QUEENSPAM import CMD_HNDLR as hl
 from telethon.tl.functions.users import GetFullUserRequest
 # alive Pic By Default It's Will Show Our
-from DEADLYSPAM import ALIVE_PIC
+from QUEENSPAM import ALIVE_PIC
 from telethon import events, version, Button
 from telethon.tl.custom import button
 from time import time
 from datetime import datetime
 
-DEAD_PIC = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/c6f99c0b68ff07439ed72.jpg"
+QUEEN_PIC = ALIVE_PIC if ALIVE_PIC else "https://te.legra.ph/file/242e5d428b85aa113c268.jpg"
   
 
-DEADLY = "✨ 𝗤𝘂𝗲𝗲𝗻 𝗦𝗽𝗮𝗺 𝗕𝗮𝗯𝘆 🥀\n\n"
-DEADLY += f"❅─────✧❅✦❅✧─────❅•\n"
-DEADLY += f"➻ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.1`\n"
-DEADLY += f"➻ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{version.__version__}`\n"
-DEADLY += f"➻ **Qᴜᴇᴇɴʙᴏᴛ ᴠᴇʀsɪᴏɴ**  : `{deadlyversion}`\n"
-DEADLY += f"❅─────✧❅✦❅✧─────❅•\n\n"   
+QUEEN = "✨ 𝗤𝘂𝗲𝗲𝗻 𝗦𝗽𝗮𝗺 𝗕𝗮𝗯𝘆 🥀\n\n"
+QUEEN += f"❅─────✧❅✦❅✧─────❅•\n"
+QUEEN += f"➻ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.1`\n"
+QUEEN += f"➻ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{version.__version__}`\n"
+QUEEN += f"➻ **Qᴜᴇᴇɴʙᴏᴛ ᴠᴇʀsɪᴏɴ**  : `{deadlyversion}`\n"
+QUEEN += f"❅─────✧❅✦❅✧─────❅•\n\n"   
 
                                   
 @BOT0.on(events.NewMessage(incoming=True, pattern=r"\%salive(?: |$)(.*)" % hl))
 async def alive(event):
   if event.sender_id in SUDO_USERS:
      await BOT0.send_file(event.chat_id,
-                                  DEAD_PIC,
-                                  caption=DEADLY,
+                                  QUEEN_PIC,
+                                  caption=QUEEN,
                                   buttons=[
         [
-        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/DEADLY_SPAMBOT"),
-        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/DEADLY_SPAM_BOT")
+        Button.url("°ᴄʜᴀɴɴᴇʟ°", "https://t.me/DEADLY_SPAMBOT"),
+        Button.url("°sᴜᴘᴘᴏʀᴛ°", "https://t.me/DEADLY_SPAM_BOT")
         ],
         [
-        Button.url("• ʀᴇᴘᴏ •", "https://github.com/Team-Deadly/DEADLY-SPAMBOT")
+        Button.url(" °ʀᴇᴘᴏ°", "https://github.com/MrProgrammer72/QUEEN-SPAM")
         ]
         ]
         )
@@ -87,7 +87,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"🎉 🇵 🇴 🇳 🇬 !\n\n♡︎ `{ms}` 𝗺𝘀 ♡︎")
+        await event.edit(f"🎊 𝗣𝗢𝗡𝗚 !\n\n♡︎ `{ms}` 𝗺𝘀 ♡︎")
         
         
 
