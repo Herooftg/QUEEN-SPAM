@@ -1,6 +1,6 @@
 import asyncio
-from DEADLYSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
-from DEADLYSPAM import CMD_HNDLR as hl
+from QUEENSPAM import BOT0, BOT1, BOT2, BOT3, BOT4, BOT5, BOT6, BOT7, BOT8, BOT9, SUDO_USERS, OWNER_ID
+from QUEENSPAM import CMD_HNDLR as hl
 import telethon.utils
 from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
@@ -26,11 +26,11 @@ async def _(e):
         if len(e.text) > 7:
             bc = deadly[0]
             Xd = int(bc)
-            text = "Leaving....."
+            text = "ʟᴇᴀᴠɪɴɢ....."
             event = await e.reply(text)
             try:
                 await event.client(LeaveChannelRequest(Xd))
-                await event.edit("sᴜᴄᴇssғᴜʟʟʏ ʟᴇғᴛ ᴛʜᴇ ᴄʜᴀᴛ ✅")
+                await event.edit("sᴜᴄᴇssғᴜʟʟʏ ʟᴇғᴛ ᴛʜᴇ ᴄʜᴀᴛ ")
             except Exception as e:
                 await event.edit(str(e))   
         else:
