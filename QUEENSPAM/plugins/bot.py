@@ -87,7 +87,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"🎊 𝗣𝗢𝗡𝗚 !\n\n♡︎ `{ms}` 𝗺𝘀 ♡︎")
+        await event.edit(f"🎊 𝙋𝙊𝙉𝙂 𝘽𝘼𝘽𝙔 !\n\n♡︎ `{ms}` 𝗺𝘀 ♡︎")
         
         
 
@@ -103,7 +103,7 @@ async def ping(e):
 @BOT9.on(events.NewMessage(incoming=True, pattern=r"\%srestart(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
-        text = "𝐑𝐞𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ↪️.. Please Wait Until It Starts Again"
+        text = "ʀᴇʟᴏᴀᴅɪɴɢ.. ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴜɴᴛɪʟ ɪᴛ ꜱᴛᴀʀᴛꜱ ᴀɢᴀɪɴ"
         await e.reply(text, parse_mode=None, link_preview=None)
         try:
             await BOT0.disconnect()
@@ -159,11 +159,11 @@ sudousers = os.environ.get("SUDO_USER", None)
 async def tb(event):
     if event.sender_id == OWNER_ID:
         ok = await event.reply("Adding user as a sudo...")
-        DEADLY = "SUDO_USER"
+        QUEEN = "SUDO_USER"
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
         else:
-            await ok.edit("`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**")
+            await ok.edit("`[HEROKU]:" "\nᴘʟᴇᴀꜱᴇ ꜱᴇᴛᴜᴘ ʏᴏᴜʀ` **HEROKU_APP_NAME**")
             return
         heroku_var = app.config()
         if event is None:
@@ -176,7 +176,7 @@ async def tb(event):
             newsudo = f"{sudousers} {target}"
         else:
             newsudo = f"{target}"
-        await ok.edit(f"**Added `{target}` ** as a sudo user 🔱 Restarting.. Please wait a minute...")
+        await ok.edit(f"**Added `{target}` ** ᴀꜱ ᴀ ꜱᴜᴅᴏ ᴜꜱᴇʀ ʀᴇꜱᴛᴀʀᴛɪɴɢ.. ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍɪɴᴜᴛᴇ...")
         heroku_var[DEADLY] = newsudo   
    
      
