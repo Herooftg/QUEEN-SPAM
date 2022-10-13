@@ -10,11 +10,11 @@ QUEEN_IMG = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph/file/c6f99c0b68ff074
 
 Queen_Button = [
         [
-        Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/QUEEN_NETWORK"),
-        Button.url("Sᴜᴘᴘᴏʀᴛ", "https://t.me/QUEEN_SPAM_BOT")
+        Button.url("°Cʜᴀɴɴᴇʟ°", "https://t.me/QUEEN_NETWORK"),
+        Button.url("°Sᴜᴘᴘᴏʀᴛ°", "https://t.me/QUEEN_SPAM_BOT")
         ],
         [
-        Button.url("• Rᴇᴘᴏ •", "https://github.com/MrProgrammer72/QUEEN-SPAM")
+        Button.url(" °Rᴇᴘᴏ°", "https://github.com/MrProgrammer72/QUEEN-SPAM")
         ]
         ]
         
